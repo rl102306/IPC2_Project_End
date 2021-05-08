@@ -1,0 +1,49 @@
+{% extends 'core/base.html'%}
+	{% block contenido %}
+    {% load static %}
+
+                                                <h3>Upload</h3>
+
+													<form method="post" action="#" enctype="multipart/form-data">
+													{% csrf_token %}
+														<div class="row gtr-uniform">
+															<!-- Break -->
+															<div class="col-12">
+																<ul class="actions">
+																	<li><input type="file" name ="document">
+																	<button type="submit">Cargar</button></li>
+																	
+																</ul>
+															</div>
+														</div>
+													</form>
+
+
+													{% if url %}
+
+													<p>Visualizar: </p> <a href="{{url}}">{{url}}</a></p>
+
+													{% endif %}
+
+													
+                                                <h3>Ver archivo: </h3>
+
+													<form method="get" action="{% url 'rxmlfront' %}"enctype="multipart/form-data">
+													{% csrf_token %}
+														<div class="row gtr-uniform">
+															<!-- Break -->
+															<div class="col-12">
+																<ul class="actions">
+
+																<button type="submit" name='ver'>Ver</button></li>
+																	
+																</ul>
+															</div>
+														</div>
+													</form>
+
+
+
+
+
+{% endblock contenido %}

@@ -1,0 +1,27 @@
+{% extends 'core/base.html'%}
+	{% block contenido %}
+    {% load static %}
+    <h4> Archivo Cargado </h4>
+ 
+    {% if data %}
+        <div class="col-12">
+		<textarea name="demo-message" id="demo-message" placeholder="" rows="45">{{data}}</textarea>
+		</div>
+	{% endif %}
+
+     <h3>Preparar XML: </h3>
+
+		<form method="post" action="{% url 'prepararxml' %}">
+		    {% csrf_token %}
+		    <div class="row gtr-uniform">
+			<!-- Break -->
+			<div class="col-12">
+			<ul class="actions">
+			<button type="submit" name='ver'>Enviar</button></li>
+			</ul>
+    		</div>
+			</div>
+			</form>
+
+
+{% endblock contenido %}
