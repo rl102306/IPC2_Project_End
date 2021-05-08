@@ -46,6 +46,8 @@ def rxml(request):
 
 def prepararxml(request):
 
+    context = {}
+
     archivo_xml = open("media/entrada.xml","r")
 
     lectura_xml = archivo_xml.read()
@@ -54,13 +56,40 @@ def prepararxml(request):
 
     #print(r.text)
 
-    html_response = "<h1>Ejemplo1</h1>"
+    #html_response = "<h1>Ejemplo1</h1>"
     
-    html_response += r.text
+    #html_response += r.text
     
-    html_response += "<p>Eso es el resultado del Ejemplo1</p>"
+    #html_response += "<p>Eso es el resultado del Ejemplo1</p>"
+
+    context['ex'] = r.text
     
-    return HttpResponse(html_response)
+    return render(request,'core/preparado.html',context)
+
+
+def wxml(request):
+
+    context = {}
+
+    archivo_xml = open("media/entrada.xml","r")
+
+    lectura_xml = archivo_xml.read()
+
+    r = requests.get('http://127.0.0.1:5000/ob_xml',data=lectura_xml)
+
+    #print(r.text)
+
+    #html_response = "<h1>Ejemplo1</h1>"
+    
+    #html_response += r.text
+    
+    #html_response += "<p>Eso es el resultado del Ejemplo1</p>"
+
+    context['ex'] = r.text
+    
+    return render(request,'core/preparado.html',context)
+
+
 
 
 
