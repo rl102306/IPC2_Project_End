@@ -5,13 +5,13 @@ from lxml import etree
 class estadistica:
 
 
-    def w_xml(self,ruta,xmlfile):
+    def w_xml(self,xmlfilesta,xmlfileprep):
 
-        file = open(ruta,"w")
+        file = open(xmlfilesta,"w")
 
         file.write("<ESTADISTICAS>\n")
 
-        xml_data = xmlfile
+        xml_data = xmlfileprep
 
         tree = ET.parse(xml_data)
 

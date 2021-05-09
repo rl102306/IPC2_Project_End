@@ -1,0 +1,9 @@
+{% extends 'core/base.html'%}
+	{% block contenido %}
+    {% load static %}
+    {% if data %}
+        <div class="col-12">
+		<textarea name="demo-message" id="demo-message" placeholder="" rows="45">{{data}}</textarea>
+		</div>
+	{% endif %}
+{% endblock contenido %}

@@ -10,7 +10,22 @@
         <div class="col-12">
 		<p>{{ex}}</p>
 		</div>
-	{% endif %}
+	    {% endif %}
+
+	<h3>Estadistica XML: </h3>
+
+		<form method="post" action="{% url 'wxml' %}">
+		    {% csrf_token %}
+		    <div class="row gtr-uniform">
+			<!-- Break -->
+			<div class="col-12">
+			<ul class="actions">
+			<button type="submit" name='ver'>Ver</button></li>
+			</ul>
+    		</div>
+			</div>
+			</form>
+     
 
 
 {% endblock contenido %}

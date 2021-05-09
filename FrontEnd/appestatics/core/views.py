@@ -71,11 +71,11 @@ def wxml(request):
 
     context = {}
 
-    archivo_xml = open("media/entrada.xml","r")
+    #archivo_xml = open("media/entrada.xml","r")
 
-    lectura_xml = archivo_xml.read()
+    #lectura_xml = archivo_xml.read()
 
-    r = requests.get('http://127.0.0.1:5000/ob_xml',data=lectura_xml)
+    r = requests.get('http://127.0.0.1:5000/c_xml')
 
     #print(r.text)
 
@@ -85,9 +85,9 @@ def wxml(request):
     
     #html_response += "<p>Eso es el resultado del Ejemplo1</p>"
 
-    context['ex'] = r.text
+    context['data'] = r.text
     
-    return render(request,'core/preparado.html',context)
+    return render(request,'core/estadisticas.html',context)
 
 
 

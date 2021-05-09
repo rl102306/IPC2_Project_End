@@ -88,7 +88,7 @@ def prepara_xml():
 
     fileesta = estadistica()
 
-    fileesta.w_xml(ruta)
+    fileesta.w_xml(ruta,xmlfile)
 
     # File Final
 
