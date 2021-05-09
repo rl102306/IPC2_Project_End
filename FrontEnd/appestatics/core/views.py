@@ -94,4 +94,4 @@ def wxml(request):
 
 
 
-    #return render(request,'core/preparado.html')
+    #return render(request,'core/preparado.html')c

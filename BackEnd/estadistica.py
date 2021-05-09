@@ -43,7 +43,7 @@ class estadistica:
                 if estado == 0:
 
 
-                    if ord(letra) in range(48,57):
+                    if ord(letra) in range(48,58):
 
                         straux = straux + letra 
 
@@ -81,7 +81,7 @@ class estadistica:
 
                 if estado == 1:
 
-                    if ord(letra) in range(48,57):
+                    if ord(letra) in range(48,58):
 
                         straux = straux + letra
 
@@ -99,7 +99,7 @@ class estadistica:
 
                 if estado == 2:
 
-                    if ord(letra) in range(48,57):
+                    if ord(letra) in range(48,58):
 
                         straux = straux + letra 
 
@@ -242,7 +242,7 @@ class estadistica:
 
                     else:
                             
-                        if ord(letra) in range(48,57) :
+                        if ord(letra) in range(48,58) :
                                 
                             strauxerr = strauxerr + letra
 
