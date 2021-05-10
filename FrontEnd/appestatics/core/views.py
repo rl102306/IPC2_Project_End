@@ -114,6 +114,24 @@ def grfce(request):
     
     return render(request,'core/graficafce.html')
 
+def ayuda(request):
+    '''
+    print("Hola")
+
+    pdf = open('media/Ensayo3_201114493.pdf','r')
+
+    response = HttpResponse(pdf)
+
+    return response
+    
+    return render(request,'core/ayuda.html')'''
+
+    with open('media/Ensayo3_201114493.pdf', 'r') as pdf:
+        response = HttpResponse(pdf.read(), mimetype='application/pdf')
+        response['Content-Disposition'] = 'inline;filename=some_file.pdf'
+        return response
+    pdf.closed
+
 
 
 

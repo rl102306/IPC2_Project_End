@@ -126,7 +126,7 @@ def gfce():
 
     #datafilefinal = open('estadistica.xml','r+')
 
-    return "Ok"#Response(response=datafilefinal.read(),mimetype='text/plain',
+    return 'oK'#Response(response=datafilefinal.read(),mimetype='text/plain',
                 #    content_type='text/plain')
     
 
