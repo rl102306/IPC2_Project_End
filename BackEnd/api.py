@@ -8,6 +8,8 @@ from preparar import preparar
 
 from estadistica import estadistica
 
+from datecoderror import Listfilfce
+
 import re
 
 import requests
@@ -17,6 +19,8 @@ import xmltodict
 
 app  = Flask(__name__)
 
+
+fileesta = estadistica()
 
 @app.route('/')
 
@@ -86,7 +90,7 @@ def prepara_xml():
 
     xmlfile = 'filepreparado.xml'
 
-    fileesta = estadistica()
+    #fileesta = estadistica()
 
     fileesta.w_xml(ruta,xmlfile)
 
@@ -99,12 +103,19 @@ def prepara_xml():
 
 
 
-@app.route('/w_xml',methods=['POST'])
+@app.route('/g_fce',methods=['GET','POST'])
 
-def write_xml():
+def gfce():
+
+
+    #fileesta.grafica(20001)
+
+    fileesta.graficaest("20001")
 
     
-    # File Final
+    # Grafica por fech y por codigo de usuario
+
+
 
     datafilefinal = open('estadistica.xml','r+')
 
@@ -121,3 +132,5 @@ if __name__ == '__main__':
     app.run(debug=True,port=5000)
 
     workxmlp = preparar()
+
+    

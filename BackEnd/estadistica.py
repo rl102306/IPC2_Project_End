@@ -2,11 +2,21 @@ import xml.etree.ElementTree as ET
 
 from lxml import etree
 
+from datecoderror import Listfilfce
+
+
 class estadistica:
+
+    def __init__(self):
+
+        self.listfce = Listfilfce()
+
 
 
     def w_xml(self,xmlfilesta,xmlfileprep):
 
+
+        
         file = open(xmlfilesta,"w")
 
         file.write("<ESTADISTICAS>\n")
@@ -35,6 +45,15 @@ class estadistica:
             strauxafec = ""
 
             strauxerr = ""
+
+
+            codigoerror = ""
+
+            fecha = ""
+
+            cantidad = 0
+
+            
 
             while indice < len(info):
 
@@ -110,6 +129,8 @@ class estadistica:
                         if letra == '\n':
 
                             file.write("<FECHA>"+straux+"</FECHA>"+'\n')
+
+                            fecha = straux
 
                             estado = 0
                 
@@ -256,6 +277,8 @@ class estadistica:
 
                     file.write('<ERROR>'+'\n'+'<CODIGO>'+strauxerr+'</CODIGO>'+'\n')
 
+                    codigoerror = strauxerr
+
                     strauxerr = ""
 
                     estado = 16
@@ -299,7 +322,11 @@ class estadistica:
                         if letra == '#':
                     
                             file.write('<CANTIDAD_MENSAJES>'+str(cant)+'</CANTIDAD_MENSAJES>'+'\n'+'</ERROR>'+'\n')
-                    
+
+                            cantidad = cant
+
+                            self.listfce.addInicio(codigoerror,fecha,cantidad)
+
                             estado = 0
                         
                         else:
@@ -308,6 +335,8 @@ class estadistica:
 
                         
                 indice += 1
+
+                
 
 
 
@@ -322,3 +351,8 @@ class estadistica:
 
   
         file.close()
+
+
+    def graficaest(self,codigoerror):
+
+        self.listfce.grafica(codigoerror)

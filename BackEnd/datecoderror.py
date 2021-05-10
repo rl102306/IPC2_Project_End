@@ -1,12 +1,17 @@
 from nododatecodeerror import NodeDateCodeError
 
 
+import matplotlib.pyplot as plt
+
+
 class Listfilfce:
+
+
 
     def __init__(self):
 
-        self.primero = none
-        self.ultimo = none
+        self.primero = None
+        self.ultimo = None
     
     def vacia(self):
 
@@ -33,4 +38,43 @@ class Listfilfce:
             self.primero = aux
 
             self.ultimo.siguiente = self.primero
+
+    def grafica(self,codigoerror):
+
+        listax = []
+
+        listay = []
+
+        ejex = ""
+
+        ejey = ""
+
+        fig, ax, = plt.subplots()
+
+        aux = self.primero
+
+        while aux.siguiente != self.primero:
+
+            if (codigoerror == aux.codigo):
+        
+                print("Codigo Erro : ", aux.codigo, "Fecha: ",aux.fecha, "Cantidad :" , aux.cantidad)
+
+                listax.append(aux.fecha)
+
+                listay.append(aux.cantidad)
+
+            aux = aux.siguiente
+        
+        
+        ax.scatter(listax,listay)
+
+        plt.savefig('fce.png')
+
+        plt.show()
+        
+        
+        
+        
+        #print("Codigo Erro : ", aux.codigo, "Fecha: ",aux.fecha, "Cantidad :" , aux.cantidad)
+
     

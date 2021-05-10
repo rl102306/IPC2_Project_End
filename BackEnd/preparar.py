@@ -104,4 +104,21 @@ class preparar():
 
         datafile6.close()
 
+
+        # Septima Limpieza XML
+
+        # La idea aca es quitar el < de usuarios afectados
+        
+        datafile7 = open(ruta,'r+')
+
+        data7 = datafile7.read()
+
+        datafile7.seek(0)
+
+        datafile7.write(re.sub(r":\s<",r": ", data7))
+
+        datafile7.truncate()
+
+        datafile7.close()
+
     # Finaliza la limpieza para las estadisticas

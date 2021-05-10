@@ -2,8 +2,12 @@ from django.shortcuts import render , HttpResponse
 
 from django.core.files.storage import FileSystemStorage
 
+from os import remove,path
 
 import requests
+
+
+
 
 # Create your views here.
 
@@ -13,6 +17,10 @@ def home(request):
 
 
 def carga(request):
+
+    if path.exists("media/entrada.xml"):
+
+         remove('media/entrada.xml')
 
     context = {}
 
@@ -25,6 +33,7 @@ def carga(request):
         name = fs.save(uploaded_file.name, uploaded_file)
 
         uploaded_file_url = fs.url(name)
+
 
         context['url'] = fs.url(name)
 

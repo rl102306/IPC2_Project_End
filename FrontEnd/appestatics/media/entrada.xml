@@ -1,13 +1,13 @@
 <EVENTOS>
 <EVENTO>
-Guatemala, 10/05/2021
-Reportado por: <"Nombre Empleado 1" correo1@ing.usac.edu.gt>
+Guatemala, 30/09/2021
+Reportado por: <"Nombre Empleado 1" pruebafina5820@ing.usac.edu.gt>
 Usuarios afectados: afectado11@ing.usac.edu.gt, <afectado12@ing.usac.edu.gt>
 Error: 20001 - Desbordamiento de búfer de memoria RAM
 en el servidor de correo electrónico.
 </EVENTO>
 <EVENTO>
-Guatemala, 05/05/2021
+Guatemala, 18/05/2022
 Reportado por: <"Nombre Empleado 2" correo2@ing.usac.edu.gt>
 Usuarios afectados: afectado21@ing.usac.edu.gt, <afectado22@ing.usac.edu.gt>, afectado23@ing.usac.edu.gt
 Error: 25684 - Mensaje de el error 25684 
@@ -50,12 +50,13 @@ Reportado por: <"Nombre Empleado 7" correo7@ing.usac.edu.gt>
 Usuarios afectados: afectado71@ing.usac.edu.gt, afectado72@ing.usac.edu.gt, afectado73@ing.usac.edu.gt, afectado74@ing.usac.edu.gt, afectado75@ing.usac.edu.gt
 Error: 20001 - Mensaje de el error 20001 
 este es la segunda linea de el error numero 20001 
+este es la terceralinea de el error numero 20001
 este es la terceralinea de el error numero 20001 
 </EVENTO>
 <EVENTO>
 Guatemala, 15/01/2021
 Reportado por: <"Nombre Empleado 8" correo8@ing.usac.edu.gt>
-Usuarios afectados: afectado81@ing.usac.edu.gt
+Usuarios afectados: <afectado81@ing.usac.edu.gt>
 Error: 778899- Mensaje de el error 778899
 este es la segunda linea de el error numero 778899
 </EVENTO>
@@ -69,7 +70,7 @@ este es la segunda linea de el error numero 30124
 <EVENTO>
 Guatemala, 01/01/2021
 Reportado por: <"Nombre Empleado 10" correo10@ing.usac.edu.gt>
-Usuarios afectados: afectado11@ing.usac.edu.gt, afectado102@ing.usac.edu.gt, afectado103@ing.usac.edu.gt
+Usuarios afectados: <afectado11@ing.usac.edu.gt>, afectado102@ing.usac.edu.gt, afectado103@ing.usac.edu.gt
 Error: 88899- Mensaje de el error 88899
 este es la segunda linea de el error numero 88899
 </EVENTO>
@@ -86,5 +87,16 @@ Reportado por: <"Nombre Empleado 1" correo1@ing.usac.edu.gt>
 Usuarios afectados: afectado11@ing.usac.edu.gt, afectado122@ing.usac.edu.gt, afectado123@ing.usac.edu.gt
 Error: 88899- Mensaje de el error 88899
 este es la segunda linea de el error numero 88899
+</EVENTO>
+<EVENTO>
+Guatemala, 25/01/2021
+Reportado por: <"Nombre Empleado 7" correo7@ing.usac.edu.gt>
+Usuarios afectados: afectado131@ing.usac.edu.gt, afectado132@ing.usac.edu.gt, afectado134@ing.usac.edu.gt
+Error: 20001 - Mensaje de el error 20001 
+este es la segunda linea de el error numero 20001 
+este es la terceralinea de el error numero 20001
+este es la terceralinea de el error numero 20001
+este es la terceralinea de el error numero 20001
+este es la terceralinea de el error numero 20001 
 </EVENTO>
 </EVENTOS>
