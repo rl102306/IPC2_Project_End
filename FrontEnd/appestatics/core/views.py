@@ -99,8 +99,22 @@ def wxml(request):
     return render(request,'core/estadisticas.html',context)
 
 
+def grfce(request):
+
+    if request.method == "POST":
+
+        #response = ''
+
+        codigo = request.POST['codigoerror']
+
+        print("Hola soy del lado del front: " + codigo)
+
+        r = requests.get('http://127.0.0.1:5000/g_fce', data=codigo)
+
+    
+    return render(request,'core/graficafce.html')
 
 
 
 
-    #return render(request,'core/preparado.html')c
+

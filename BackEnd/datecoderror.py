@@ -68,9 +68,9 @@ class Listfilfce:
         
         ax.scatter(listax,listay)
 
-        plt.savefig('fce.png')
+        plt.savefig('media/gfce.png')
 
-        plt.show()
+        #plt.show()
         
         
         

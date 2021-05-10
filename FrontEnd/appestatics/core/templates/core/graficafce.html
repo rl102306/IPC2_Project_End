@@ -1,0 +1,24 @@
+{% extends 'core/base.html'%}
+	{% block contenido %}
+    {% load static %}
+
+<h3>Ver archivo: </h3>
+
+													<form method="post" action="{% url 'grfce' %}">
+													{% csrf_token %}
+														<div class="row gtr-uniform">
+															<!-- Break -->
+															<div class="col-12">
+
+																<ul class="actions">
+
+                                                                <input type="text" name="codigoerror">
+																
+                                                                <button type="submit" name='ver'>Consultar</button></li>
+																	
+																</ul>
+															</div>
+														</div>
+													</form>
+
+{% endblock contenido %}

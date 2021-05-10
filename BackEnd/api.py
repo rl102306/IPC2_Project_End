@@ -108,19 +108,26 @@ def prepara_xml():
 def gfce():
 
 
+    codigoerror = request.data.decode('UTF-8')
+
+    
+
+
     #fileesta.grafica(20001)
 
-    fileesta.graficaest("20001")
+    
+
+    fileesta.graficaest(codigoerror)
 
     
     # Grafica por fech y por codigo de usuario
 
 
 
-    datafilefinal = open('estadistica.xml','r+')
+    #datafilefinal = open('estadistica.xml','r+')
 
-    return Response(response=datafilefinal.read(),mimetype='text/plain',
-                    content_type='text/plain')
+    return "Ok"#Response(response=datafilefinal.read(),mimetype='text/plain',
+                #    content_type='text/plain')
     
 
 
